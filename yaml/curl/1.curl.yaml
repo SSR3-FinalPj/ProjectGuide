@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: curl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: curl
+  template:
+    metadata:
+      labels:
+        app: curl
+    spec:
+      containers:
+      - name: curl
+        image: 805400277714.dkr.ecr.ap-northeast-2.amazonaws.com/curl:1.0.1
+        command: ["/bin/sleep", "infinity"] 
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: streamsets-data
+          mountPath: /data
+      volumes:
+        - name: streamsets-data
+          persistentVolumeClaim:
+            claimName: streamsets-data-pvc
+---

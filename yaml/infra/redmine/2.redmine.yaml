@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redmine
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 3000
+  selector:
+    app: redmine
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redmine
+spec:
+  selector:
+    matchLabels:
+      app: redmine
+  template:
+    metadata:
+      labels:
+        app: redmine
+    spec:
+      containers:
+        - name: redmine
+          image: redmine
+          env:
+            - name: REDMINE_DB_MYSQL
+              value: "mysql"  # mysql 서비스 이름
+            - name: REDMINE_DB_PASSWORD
+              value: "example"
+            - name: REDMINE_SECRET_KEY_BASE
+              value: "supersecretkey"
+          ports:
+            - containerPort: 3000

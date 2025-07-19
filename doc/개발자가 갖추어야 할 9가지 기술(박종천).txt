@@ -1,0 +1,47 @@
+- 개발자가 갖추어야 할 9가지 기술 (박종천)
+  O.  Hard Skills
+   1. Basic Knowledge(C++, OS) : 기본 지식, 혼자 계속 공부 필요. 시대에 따라 필요한 기술
+   2. Understanding for product : Why Software sucks... (제품이 어떻게 쓰여지는지에 대한 고민 필요, 사용자 입장/환경에서 고민)
+   3. Development Cycle 
+     : Requirements & Analysis 
+     : Design & Modeling
+     : Implementataion
+     : Test / Release
+     : Feedback / Update
+     *) Agile은 위의 단계를 생략하는게 아니라 빠르게 돌리는 거다.
+     *) Initiator -> Implementator -> Finisher
+  O. Soft Skills
+   4. Project Management
+     : Why, What, How - * 어떤 제품을 왜, 어떻게 만드는지 항상 팀원들이 공유하고 있어야 함
+     : Triple Constrains - Cost(resources) / Time(schedule) / Scope(quality)
+     *) 디버깅의 중요 과정은 코드의 문제가 아니라 개발자체(프로세스)에 문제가 없는지 확인해야 함
+   5. Team Management
+     : Forming, Storming, Norming, Performing
+	   팀을 구성하면 서로 어떤 기술을 가지고 있는지 어떤 성향인지 파악하고(forming) 어느 정도 파악이 되면 서로 부딪치고(storming) 어느정도 조율이 되면(norming) 시너지가 날 수 있어야 함(performing)
+     *) 1 + 1 => 3가 되도록 시너지가 날 수 있어야 함
+     *) what type, why type, how type의 사람들이 있음
+     : Roles 
+       Producer(Helper), Aritsts, Designers(Success maker), Engineer(failure preventer : overengineering은 막아야 함)
+   6. Process
+     : Better way to do it, Optimal way
+      *) 전체 시스템을 보호해 주고 어떤 시도(실패)를 해도 될 수 있도록 만들어 줌
+      *) 어떤 사람이 나가도 잘 돌아가도록 해 줌
+     : PMMM(Project Management Maturity Model)
+       Initial(Common Language), Repeatable(Common Process), Defined(Singular Methodology), Managed(Benchmarking), Optimized(Continuous Improvment)
+  O. Business Skills	   
+   7. HR Systm
+     : Hiring, Performance Reviews(평가), Education, Benefilts(Rewards)
+     : Performance Review - Productivity / Professionalism / Teamwork / Knowledge / Functionality / Implementation / Design&Architecture
+   8. Business Management
+     : Making money a certain way doing things you are comfortable doing and contributing to society
+     : ROI(Return of Investment)
+     : Balanced Scorecard - Financial Perspective / Customer Perspective / Internal Process Perspective / Learning and Growth Perspective
+     *) Customer - company's customer / leadership / employees 셋을 모두 만족 시켜야 함
+   9. Vision, Goals and Culture
+     : Vision and Goals for the company / the team / you
+	 *) Vision은 방향성, Goals는 중간 중간의 목표점
+	 => Culture를 가져야 사람들이 묶이기 쉬워짐
+
+*) 호기심을 잃으면 개발자로서는 끝 => 새로운 사람들을 계속 만나라
+*) 지속적으로 재능을 쌓아라 => 기회가 왔을때 잡을 수 있다
+*) 인정받는 개발자 => A단계, A+단계, B단계

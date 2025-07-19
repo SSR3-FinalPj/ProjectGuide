@@ -1,0 +1,91 @@
+   1. 개발자가 갖추어야 할 9가지 기술 (박종천) : 한글과컴퓨터, 블리자드, 넥슨, 삼성전자, 개발자로 살아남기, 챗GPT시대 살아남기
+      - https://www.youtube.com/watch?v=fHyTA-UIcqs&t=3637s
+
+   2. 구성 설명
+      - 목표시스템_구성도_20241010.pptx
+
+   3. Kubernetes 개념 설명(핵심만 : 상세한 내용은 각자 공부)
+      - Docker / Container / Pod
+        https://khj93.tistory.com/entry/Docker-Docker-%EA%B0%9C%EB%85%90
+        https://velog.io/@gyumin_2/Docker%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EB%AA%A8%EB%A5%B4%EA%B2%A0%EB%8B%A4
+        https://computing-jhson.tistory.com/102
+        https://aws.amazon.com/ko/docker/
+        https://hub.docker.com/
+
+        *) 많이 사용하는 command
+           docker build, docker push, docker pull, docker tag, docker image ls(docker images),
+           docker run, docker start, docker stop, docker container ls(docker ps), docker exec -it, docker rm, docker logs,
+           docker rmi, docker network ls, docker network create, docker network inspect
+
+        *) Docker image 생성 시연
+           Dockerfile 작성법 참조 : https://docs.docker.com/engine/reference/builder/
+           - demo1
+             docker build --platform linux/amd64 -t demo1:1.0.1 .
+             docker tag demo1:1.0.1 123456789012.dkr.ecr.ap-northeast-2.amazonaws.com/demo1:1.0.1
+           - curl
+             : docker build --platform linux/amd64 -t curl:1.0.1 .
+             : docker run -d curl:1.0.1 /bin/sleep infinity
+             : docker tag curl:1.0.1 123456789012.dkr.ecr.ap-northeast-2.amazonaws.com/curl:1.0.1
+
+      - Kubernetes
+        https://jdcyber.tistory.com/46
+        https://kubernetes.io/ko/docs/concepts/overview/
+
+        *) EKS 구성 시연
+        *) 많이 사용하는 command
+           kubectl get nodes, kubectl get pods, kubectl get services,
+           kubectl describe pod {pod-name}, kubectl logs {pod-name},
+           kubectl get pv, kubectl get pvc,
+           kubectl exec -it {pod-name} -- /bin/bash
+           kubectl get deployments, kubectl get statefulsets, kubectl get daemonsets
+
+      - Deployment / StatefuleSet / DaemonSet
+        https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/
+        https://kubernetes.io/ko/docs/concepts/workloads/controllers/statefulset/
+        https://kubernetes.io/ko/docs/concepts/workloads/controllers/daemonset/
+
+      - Service
+        ClusterIP / NodePort / LoadBalancer / Ingress
+        https://sunrise-min.tistory.com/entry/Kubernetes-NodePort-vs-LoadBalancer-vs-Ingress
+        https://sharplee7.tistory.com/90
+        https://kubernetes.io/ko/docs/concepts/services-networking/service/
+        https://kubernetes.io/ko/docs/concepts/services-networking/ingress/
+
+      - ConfigMap / Secret
+        https://kubernetes.io/ko/docs/concepts/configuration/configmap/
+        https://kubernetes.io/ko/docs/concepts/configuration/secret/
+
+      - PersistentVolume / PersistentVolumeClaim
+        https://kimjingo.tistory.com/153
+        https://kubernetes.io/ko/docs/concepts/storage/persistent-volumes/
+        https://kubernetes.io/ko/docs/concepts/storage/persistent-volume-claims/
+
+   4. 실습 : 꼭 직접 해 보시기 바랍니다.
+      - AWS EKS cluster 생성
+        https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/what-is-eks.html
+      - Spring boot app(demo1) => docker build => Container Registry push => Deployment yaml
+
+   5. Redmine 설치
+
+   6. 기타 설명
+      - Netflix MSA Architecture 설명
+
+   7. EKS에 InfraS/W 배포 (시간이 될때까지...)
+      - Kafka, Redis, Streamsets, ElasticSearch, Kibana, PostgreSQL 설치 실습
+        O. Zookeeper
+           https://xangmin.tistory.com/169
+
+        O. Kafka
+           https://velog.io/@holicme7/Apache-Kafka-%EC%B9%B4%ED%94%84%EC%B9%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80
+           https://ifuwanna.tistory.com/487
+
+        O. StreamSets
+           https://www.ibm.com/docs/en/streamsets-legacy-dc/5.6.x?topic=guide-getting-started
+
+        O. ElasticSearch
+           https://victorydntmd.tistory.com/308
+           https://velog.io/@msjeong97/Elasticsearch%EB%9E%80
+           https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+           https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high.html
+
+      - CI/CD 자동화 실습(Github Actions 사용)
