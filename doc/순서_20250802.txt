@@ -1,0 +1,30 @@
+ 1. Redmine 설치
+    admin / rookies1234!
+
+ 2. EKS에 InfraS/W 배포 (시간이 될때까지...)
+    - Kafka, Redis, Streamsets, ElasticSearch, Kibana, PostgreSQL 설치 실습
+    O. Zookeeper
+       https://xangmin.tistory.com/169
+
+    O. Kafka
+       https://velog.io/@holicme7/Apache-Kafka-%EC%B9%B4%ED%94%84%EC%B9%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80
+       https://ifuwanna.tistory.com/487
+
+    O. Redis
+
+    O. StreamSets
+       https://www.ibm.com/docs/en/streamsets-legacy-dc/5.6.x?topic=guide-getting-started
+
+    O. ElasticSearch
+       https://victorydntmd.tistory.com/308
+       https://velog.io/@msjeong97/Elasticsearch%EB%9E%80
+       https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+       https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high.html
+
+    O. PostgreSQL
+       https://www.postgresql.org/docs/current/tutorial-install.html
+       https://www.postgresql.org/docs/current/tutorial-start.html
+
+    - CI/CD 자동화 실습(Github Actions 사용)
+
+
